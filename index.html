@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Lesinski</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+        }
+        a {
+            color: #2c3e50;
+        }
+        a:hover {
+            color: lightslategrey;
+        }
+        a:visited {
+            color: #2c3e50;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .job {
+            margin-bottom: 15px;
+        }
+        .job-title {
+            font-weight: bold;
+        }
+        .job-date {
+            color: #666;
+            font-style: italic;
+            font-weight: normal;
+            margin-inline-start: 8px;
+        }
+        .team {
+            margin-bottom: 15px;
+        }
+        .team-title {
+            color: grey;
+        }
+        .team ul {
+            margin-block-start: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="section">
+        <h1>Adam Lesinski</h1>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:adam@lesinski.me">adam@lesinski.me</a></p>
+            <p>Location: San Francisco, CA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>Summary</h2>
+        <p>Senior software engineer with experience working on operating systems like Android and Fuchsia.</p>
+    </section>
+
+    <section class="section">
+        <h2>Experience</h2>
+        <div class="job">
+            <div class="job-title">Co-Founder, Engineer - Tennis Hero, LLC<span class="job-date">Jan 2024 - Present</span></div>
+            <ul>
+                <li>Built an API server and Flutter mobile client for a tennis partner matching service.</li>
+                <li>Launched client on <a href="https://apps.apple.com/us/app/tennis-hero/id6476237404">App Store</a> and <a href="https://play.google.com/store/apps/details?id=dev.lesinski.tennis&hl=en_US">Play Store</a>.</li>
+                <li>Iterated on product with customer feedback.</li>
+            </ul>
+        </div>
+        <div class="job">
+            <div class="job-title">Senior Software Engineer - Google<span class="job-date">Sep 2013 - Jul 2022</span></div>
+            <div class="team">
+                <div class="team-title">Fuchsia</div>
+                <ul>
+                    <li>Drove the design and implementation of <a href="https://fuchsia.dev/fuchsia-src/concepts/components/v2/capabilities/resolver">Component Resolvers</a>.</li>
+                    <li>Implemented core Linux syscalls and the Android Binder kernel module for the <a href="https://fuchsia.dev/fuchsia-src/concepts/components/v2/starnix">Starnix</a> emulation layer.</li>
+                </ul>
+            </div>
+            <div class="team">
+                <div class="team-title">App Engine</div>
+                <ul>
+                    <li>Designed and implemented VPC support for App Engine and Cloud Run routing.</li>
+                    <li>Implemented Autobahn (an in-house fast network protocol) support for App Engine router frontends.</li>
+                </ul>
+            </div>
+            <div class="team">
+                <div class="team-title">Android Framework</div>
+                <ul>
+                    <li>Worked on core Android Framework services like UsageStats and BatteryStats.</li>
+                    <li>Maintained and improved the Resources subsystem (ResourceManager) for Android Apps.</li>
+                    <li>Drove the design and implementation of a faster Android Asset Packaging Tool (<a href="https://developer.android.com/tools/aapt2">AAPT2</a>), which was also adopted by the Google Play App Bundle serving model.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Education</h2>
+        <div class="job">
+            <div class="job-title">Bachelor of Software Engineering - University of Waterloo<span class="job-date">Sep 2008 - May 2013</span></div>
+            <p>Real-time operating systems, concurrency.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Skills</h2>
+        <p>Rust, C++, Java, Python, Flutter, Dart</p>
+    </section>
+</body>
+</html>
