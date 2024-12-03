@@ -5,25 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam Lesinski</title>
     <style>
+        :root {
+            --background: #DAF8D0;
+            --primary: #2A4F1D;
+            --secondary: #555;
+            --normal: #232A21;
+        }
         body {
+            font-size: 16px;
+            color: var(--normal);
+            background-color: var(--background);
             font-family: Arial, sans-serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
         }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1em;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
         h1, h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid oklch(from var(--primary) calc(l + 0.4) c h);
+        }
+        h1, h2, h3 {
+            color: var(--primary);
         }
         a {
-            color: #2c3e50;
-        }
-        a:hover {
-            color: lightslategrey;
+            color: var(--primary);
         }
         a:visited {
-            color: #2c3e50;
+            color: var(--primary);
+        }
+        a:hover {
+            color: oklch(from var(--primary) calc(l + 0.1) c h);
+        }
+        ul {
+            margin-block-start: 0;
+            margin-block-end: 0;
         }
         .profile {
             display: flex;
@@ -54,9 +80,10 @@
             display: flex;
             flex-wrap: wrap;
             column-gap: 8px;
+            align-items: last baseline;
         }
         .job-date {
-            color: #666;
+            color: var(--secondary);
             font-style: italic;
             font-weight: normal;
         }
@@ -64,11 +91,15 @@
             margin-bottom: 15px;
         }
         .team-title {
-            color: grey;
+            color: var(--secondary);
         }
-        ul {
-            margin-block-start: 0;
-            margin-block-end: 0;
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #232A21;
+                --primary: #4B8633;
+                --secondary: #777;
+                --normal: #B3CBAB;
+            }
         }
     </style>
 </head>
@@ -92,7 +123,7 @@
         <h2>Experience</h2>
         <div class="job">
             <div class="job-title">
-                <span>Co-Founder, Engineer - Tennis Hero, LLC</span>
+                <h3>Co-Founder, Engineer - Tennis Hero, LLC</h3>
                 <span class="job-date">Jan 2024 - Present</span>
             </div>
             <ul>
@@ -103,7 +134,7 @@
         </div>
         <div class="job">
             <div class="job-title">
-                <span>Senior Software Engineer - Google</span>
+                <h3>Senior Software Engineer - Google</h3>
                 <span class="job-date">Sep 2013 - Jul 2022</span>
             </div>
             <div class="team">
@@ -135,7 +166,7 @@
         <h2>Education</h2>
         <div class="job">
             <div class="job-title">
-                <span>Bachelor of Software Engineering - University of Waterloo</span>
+                <h3>Bachelor of Software Engineering - University of Waterloo</h3>
                 <span class="job-date">Sep 2008 - May 2013</span>
             </div>
             <p>Real-time operating systems, concurrency.</p>
