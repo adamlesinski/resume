@@ -1,193 +1,278 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Lesinski</title>
-    <style>
-        :root {
-            --background: #DAF8D0;
-            --primary: #2A4F1D;
-            --secondary: #555;
-            --normal: #232A21;
-        }
-        body {
-            font-size: 16px;
-            color: var(--normal);
-            background-color: var(--background);
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 24px;
-            line-height: 1.6;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-            border: 0;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin-block-start: 0;
-            border-bottom: 2px solid oklch(from var(--primary) calc(l + 0.4) c h);
-        }
-        h3 {
-            font-size: 1em;
-            margin-block-start: 0;
-            margin-block-end: 0;
-        }
-        h1, h2, h3 {
-            color: var(--primary);
-        }
-        a {
-            color: var(--primary);
-        }
-        a:visited {
-            color: var(--primary);
-        }
-        a:hover {
-            color: oklch(from var(--primary) calc(l + 0.1) c h);
-        }
-        ul {
-            margin-block-start: 0;
-            margin-block-end: 0;
-        }
-        .profile {
-            display: flex;
-            flex-direction: column;
-            margin-block-end: 24px;
-        }
-        .profile > img {
-            clip-path: circle(50%);
-        }
-        .links {
-            display: flex;
-            column-gap: 8px;
-            flex-wrap: wrap;
-        }
-        .expand {
-            flex-grow: 1;
-        }
-        .section {
-            margin-bottom: 24px;
-        }
-        .job {
-            margin-bottom: 16px;
-        }
-        .job-title {
-            font-weight: bold;
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 8px;
-            align-items: last baseline;
-        }
-        .job-date {
-            color: var(--secondary);
-            font-style: italic;
-            font-weight: normal;
-        }
-        .team {
-            margin-bottom: 15px;
-        }
-        .team-title {
-            color: var(--secondary);
-        }
-        @media (prefers-color-scheme: dark) {
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adam Lesinski</title>
+        <style>
             :root {
-                --background: #232A21;
-                --primary: #589d3c;
-                --secondary: #858585;
-                --normal: #c2dbba;
+                --background: #daf8d0;
+                --primary: #2a4f1d;
+                --secondary: #555;
+                --normal: #232a21;
             }
-        }
-        @media (min-width: 640px) {
-            .profile {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
+            body {
+                font-size: 16px;
+                color: var(--normal);
+                background-color: var(--background);
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 24px;
+                line-height: 1.6;
+            }
+            h1 {
+                font-size: 2.5em;
+                margin: 0;
+                border: 0;
+            }
+            h2 {
+                font-size: 1.5em;
+                margin-block-start: 0;
+                border-bottom: 2px solid
+                    oklch(from var(--primary) calc(l + 0.4) c h);
+            }
+            h3 {
+                font-size: 1em;
+                margin-block-start: 0;
                 margin-block-end: 0;
             }
-            .profile > img {
-                order: 1;
+            h1,
+            h2,
+            h3 {
+                color: var(--primary);
             }
-        }
-    </style>
-</head>
-<body>
-    <header class="profile">
-        <img src="profile.jpg" width="150" height="150" alt="Photo of Adam Lesinski" />
-        <div class="contact">
-            <h1>Adam Lesinski</h1>
-            <div class="links">
-                <a href="mailto:adam@lesinski.me">adam@lesinski.me</a>
-                <a href="https://github.com/adamlesinski">Github</a>
-                <a href="https://www.linkedin.com/in/adam-lesinski-979204336">LinkedIn</a>
+            a {
+                color: var(--primary);
+            }
+            a:visited {
+                color: var(--primary);
+            }
+            a:hover {
+                color: oklch(from var(--primary) calc(l + 0.1) c h);
+            }
+            ul {
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+            .profile {
+                display: flex;
+                flex-direction: column;
+                margin-block-end: 24px;
+            }
+            .profile > img {
+                clip-path: circle(50%);
+            }
+            .links {
+                display: flex;
+                column-gap: 8px;
+                flex-wrap: wrap;
+            }
+            .expand {
+                flex-grow: 1;
+            }
+            .section {
+                margin-bottom: 24px;
+            }
+            .job {
+                margin-bottom: 16px;
+            }
+            .job-title {
+                font-weight: bold;
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 8px;
+                align-items: last baseline;
+            }
+            .job-date {
+                color: var(--secondary);
+                font-style: italic;
+                font-weight: normal;
+            }
+            .team {
+                margin-bottom: 15px;
+            }
+            .team-title {
+                color: var(--secondary);
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --background: #232a21;
+                    --primary: #589d3c;
+                    --secondary: #858585;
+                    --normal: #c2dbba;
+                }
+            }
+            @media (min-width: 640px) {
+                .profile {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-block-end: 0;
+                }
+                .profile > img {
+                    order: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="profile">
+            <img
+                src="profile.jpg"
+                width="150"
+                height="150"
+                alt="Photo of Adam Lesinski"
+            />
+            <div class="contact">
+                <h1>Adam Lesinski</h1>
+                <div class="links">
+                    <a href="mailto:adam@lesinski.me">adam@lesinski.me</a>
+                    <a href="https://github.com/adamlesinski">Github</a>
+                    <a
+                        href="https://www.linkedin.com/in/adam-lesinski-979204336"
+                        >LinkedIn</a
+                    >
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="section">
-        <h2>Summary</h2>
-        <p>Senior software engineer with experience working on operating systems like Android and Fuchsia.</p>
-    </section>
+        <section class="section">
+            <h2>Summary</h2>
+            <p>
+                Senior software engineer with a growth mindset and a healthy
+                dose of enthusiasm.
+            </p>
+            <p>
+                Interested in machine learning, developer tools, and their
+                intersection.
+            </p>
+        </section>
 
-    <section class="section">
-        <h2>Experience</h2>
-        <div class="job">
-            <div class="job-title">
-                <h3>Co-Founder, Engineer - Tennis Hero, LLC</h3>
-                <span class="job-date">Jan 2024 - Dec 2024</span>
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="job">
+                <div class="job-title">
+                    <h3>Software Engineer - Runloop AI</h3>
+                    <span class="job-date">Feb 2025 - Present</span>
+                </div>
+                <ul>
+                    <li>Improving DevBox performance.</li>
+                </ul>
             </div>
+            <div class="job">
+                <div class="job-title">
+                    <h3>Co-Founder, Engineer - Tennis Hero, LLC</h3>
+                    <span class="job-date">Jan 2024 - Dec 2024</span>
+                </div>
+                <ul>
+                    <li>
+                        Built an API server and Flutter mobile client for a
+                        tennis partner matching service.
+                    </li>
+                    <li>
+                        Launched client on
+                        <a
+                            href="https://apps.apple.com/us/app/tennis-hero/id6476237404"
+                            >App Store</a
+                        >
+                        and
+                        <a
+                            href="https://play.google.com/store/apps/details?id=dev.lesinski.tennis&hl=en_US"
+                            >Play Store</a
+                        >.
+                    </li>
+                    <li>Iterated on product with customer feedback.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <div class="job-title">
+                    <h3>Senior Software Engineer - Google</h3>
+                    <span class="job-date">Sep 2013 - Jul 2022</span>
+                </div>
+                <div class="team">
+                    <div class="team-title">Fuchsia</div>
+                    <ul>
+                        <li>
+                            Drove the design and implementation of
+                            <a
+                                href="https://fuchsia.dev/fuchsia-src/concepts/components/v2/capabilities/resolver"
+                                >Component Resolvers</a
+                            >.
+                        </li>
+                        <li>
+                            Implemented core Linux syscalls and the Android
+                            Binder kernel module for the
+                            <a
+                                href="https://fuchsia.dev/fuchsia-src/concepts/components/v2/starnix"
+                                >Starnix</a
+                            >
+                            emulation layer.
+                        </li>
+                    </ul>
+                </div>
+                <div class="team">
+                    <div class="team-title">App Engine</div>
+                    <ul>
+                        <li>
+                            Designed and implemented VPC support for App Engine
+                            and Cloud Run routing.
+                        </li>
+                        <li>
+                            Implemented Autobahn (an in-house fast network
+                            protocol) support for App Engine router frontends.
+                        </li>
+                    </ul>
+                </div>
+                <div class="team">
+                    <div class="team-title">Android Framework</div>
+                    <ul>
+                        <li>
+                            Worked on core Android Framework services like
+                            UsageStats and BatteryStats.
+                        </li>
+                        <li>
+                            Maintained and improved the Resources subsystem
+                            (ResourceManager) for Android Apps.
+                        </li>
+                        <li>
+                            Drove the design and implementation of a faster
+                            Android Asset Packaging Tool (<a
+                                href="https://developer.android.com/tools/aapt2"
+                                >AAPT2</a
+                            >), which was also adopted by the Google Play App
+                            Bundle serving model.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="job">
+                <div class="job-title">
+                    <h3>
+                        Bachelor of Software Engineering - University of
+                        Waterloo
+                    </h3>
+                    <span class="job-date">Sep 2008 - May 2013</span>
+                </div>
+                <p>Real-time operating systems, concurrency.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <p>Rust, C++, Java, Python, Flutter, Dart, Typescript</p>
+        </section>
+
+        <section class="section">
+            <h2>Fun</h2>
             <ul>
-                <li>Built an API server and Flutter mobile client for a tennis partner matching service.</li>
-                <li>Launched client on <a href="https://apps.apple.com/us/app/tennis-hero/id6476237404">App Store</a> and <a href="https://play.google.com/store/apps/details?id=dev.lesinski.tennis&hl=en_US">Play Store</a>.</li>
-                <li>Iterated on product with customer feedback.</li>
+                <li>Rock climbing</li>
+                <li>Tinkering with pet programming projects</li>
             </ul>
-        </div>
-        <div class="job">
-            <div class="job-title">
-                <h3>Senior Software Engineer - Google</h3>
-                <span class="job-date">Sep 2013 - Jul 2022</span>
-            </div>
-            <div class="team">
-                <div class="team-title">Fuchsia</div>
-                <ul>
-                    <li>Drove the design and implementation of <a href="https://fuchsia.dev/fuchsia-src/concepts/components/v2/capabilities/resolver">Component Resolvers</a>.</li>
-                    <li>Implemented core Linux syscalls and the Android Binder kernel module for the <a href="https://fuchsia.dev/fuchsia-src/concepts/components/v2/starnix">Starnix</a> emulation layer.</li>
-                </ul>
-            </div>
-            <div class="team">
-                <div class="team-title">App Engine</div>
-                <ul>
-                    <li>Designed and implemented VPC support for App Engine and Cloud Run routing.</li>
-                    <li>Implemented Autobahn (an in-house fast network protocol) support for App Engine router frontends.</li>
-                </ul>
-            </div>
-            <div class="team">
-                <div class="team-title">Android Framework</div>
-                <ul>
-                    <li>Worked on core Android Framework services like UsageStats and BatteryStats.</li>
-                    <li>Maintained and improved the Resources subsystem (ResourceManager) for Android Apps.</li>
-                    <li>Drove the design and implementation of a faster Android Asset Packaging Tool (<a href="https://developer.android.com/tools/aapt2">AAPT2</a>), which was also adopted by the Google Play App Bundle serving model.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Education</h2>
-        <div class="job">
-            <div class="job-title">
-                <h3>Bachelor of Software Engineering - University of Waterloo</h3>
-                <span class="job-date">Sep 2008 - May 2013</span>
-            </div>
-            <p>Real-time operating systems, concurrency.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Skills</h2>
-        <p>Rust, C++, Java, Python, Flutter, Dart</p>
-    </section>
-</body>
+        </section>
+    </body>
 </html>
